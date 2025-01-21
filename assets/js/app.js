@@ -29,10 +29,25 @@ document.addEventListener('DOMContentLoaded' , () => {
      */
     let timerId = setInterval(startGame, 20)
 
-    function jump() {
-        // Adds 50px to bird bottom to use as a jump
-        birdBottom += 50
-        bird.style.bottom = birdBottom + 'px'
+    /** space bar jumping */
+    function control(e) {
+        if (e.keyCode === 32){
+            jump()
+        }
     }
-    document.addEventListener('keyup', jump)
+
+    function jump() {
+        // Creates a ceiling for the bird
+        if (birdBottom < 500) 
+            // Adds 50px to bird bottom to use as a jump
+            birdBottom += 50
+            bird.style.bottom = birdBottom + 'px'
+        
+    }
+    document.addEventListener('keyup', control)
+
+    function generateObstical () {
+        const obstical = document.createElement('div')
+        obstical.classList.add('obstical')
+    }
 })
