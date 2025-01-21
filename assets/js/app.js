@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded' , () => {
     let birdBottom = 100
     let gravity = 2
 
+    let isGameOver = false
+
     /**
      * Function used to play the game
      */
@@ -27,7 +29,7 @@ document.addEventListener('DOMContentLoaded' , () => {
      * Let the game interval start every 20ms, used to simulate
      * gravity using the birdBottom -= gravity
      */
-    let timerId = setInterval(startGame, 20)
+    let gameTimerId = setInterval(startGame, 20)
 
     /** space bar jumping */
     function control(e) {
@@ -61,9 +63,26 @@ document.addEventListener('DOMContentLoaded' , () => {
         function moveObstical() {
             obsticalLeft -= 2
             obstical.style.left = obsticalLeft + 'px'
+
+            // remove obstical after leaving game area
+            if (obsticalLeft === -60) {
+                clearInterval(timerId)
+                gameDisplay.removeChild(obstical)
+            }
+            if (birdBottom === 0) {
+                gameOver()
+                
+            }
         }
         let timerId = setInterval(moveObstical, 20)
+        setTimeout(generateObstical, 3000)
     }
 
     generateObstical()
+
+    function gameOver() {
+        clearInterval(gameTimerId)
+        isGameOver = true
+        document.removeEventListener('keyup', control)
+    }
 })
