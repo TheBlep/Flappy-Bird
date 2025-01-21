@@ -47,7 +47,13 @@ document.addEventListener('DOMContentLoaded' , () => {
     document.addEventListener('keyup', control)
 
     function generateObstical () {
+        let obsticalLeft = 500
+        let obsticalBottom = 150
         const obstical = document.createElement('div')
         obstical.classList.add('obstical')
+        gameDisplay.appendChild(obstical)
+        obstical.style.left = obsticalLeft + 'px'
+        obstical.style.bottom = obsticalBottom + 'px'
     }
+    generateObstical()
 })
