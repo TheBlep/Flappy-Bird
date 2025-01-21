@@ -57,6 +57,12 @@ document.addEventListener('DOMContentLoaded' , () => {
         obstical.style.left = obsticalLeft + 'px'
         obstical.style.bottom = obsticalBottom + 'px'
 
+        /** moving obstical from right to left */
+        function moveObstical() {
+            obsticalLeft -= 2
+            obstical.style.left = obsticalLeft + 'px'
+        }
+        let timerId = setInterval(moveObstical, 20)
     }
 
     generateObstical()
