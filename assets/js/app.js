@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded' , () => {
      */
     function startGame() {
         birdBottom -= gravity
-        bird.computedStyleMap.bottom = birdBottom + 'px'
-        bird.computedStyleMap.left = birdLeft + 'px'
+        bird.style.bottom = birdBottom + 'px'
+        bird.style.left = birdLeft + 'px'
 
       }
     
@@ -27,5 +27,5 @@ document.addEventListener('DOMContentLoaded' , () => {
      * Let the game interval start every 20ms, used to simulate
      * gravity using the birdBottom -= gravity
      */
-    let timerid = setInterval(startGame, 20)
+    let timerId = setInterval(startGame, 20)
 })
