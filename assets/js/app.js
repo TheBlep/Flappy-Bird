@@ -28,4 +28,11 @@ document.addEventListener('DOMContentLoaded' , () => {
      * gravity using the birdBottom -= gravity
      */
     let timerId = setInterval(startGame, 20)
+
+    function jump() {
+        // Adds 50px to bird bottom to use as a jump
+        birdBottom += 50
+        bird.style.bottom = birdBottom + 'px'
+    }
+    document.addEventListener('keyup', jump)
 })
