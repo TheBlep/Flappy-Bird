@@ -48,12 +48,16 @@ document.addEventListener('DOMContentLoaded' , () => {
 
     function generateObstical () {
         let obsticalLeft = 500
-        let obsticalBottom = 150
+        // random hight in generation
+        let randomHeight = Math.random() * 60
+        let obsticalBottom = randomHeight
         const obstical = document.createElement('div')
         obstical.classList.add('obstical')
         gameDisplay.appendChild(obstical)
         obstical.style.left = obsticalLeft + 'px'
         obstical.style.bottom = obsticalBottom + 'px'
+
     }
+
     generateObstical()
 })
