@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded' , () => {
         let randomHeight = Math.random() * 60
         let obsticalBottom = randomHeight
         const obstical = document.createElement('div')
-        obstical.classList.add('obstical')
+        if (!isGameOver) obstical.classList.add('obstical')
         gameDisplay.appendChild(obstical)
         obstical.style.left = obsticalLeft + 'px'
         obstical.style.bottom = obsticalBottom + 'px'
@@ -73,11 +73,12 @@ document.addEventListener('DOMContentLoaded' , () => {
                 birdBottom === 0
                 ) {
                 gameOver()
+                clearInterval(timerId)
                 
             }
         }
         let timerId = setInterval(moveObstical, 20)
-        setTimeout(generateObstical, 3000)
+        if (!isGameOver) setTimeout(generateObstical, 3000)
     }
 
     generateObstical()
