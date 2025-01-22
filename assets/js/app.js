@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     let birdLeft = 220
     let birdBottom = 100
     let gravity = 2
+    let gap = 400
 
     let isGameOver = false
 
@@ -56,23 +57,32 @@ document.addEventListener('DOMContentLoaded' , () => {
         let randomHeight = Math.random() * 60
         let obsticalBottom = randomHeight
         const obstical = document.createElement('div')
-        if (!isGameOver) obstical.classList.add('obstical')
+        const topObstical = document.createElement('div')
+        if (!isGameOver){
+            obstical.classList.add('obstical')
+            topObstical.classList.add('topObstical')
+        }
         gameDisplay.appendChild(obstical)
+        gameDisplay.appendChild(topObstical)
         obstical.style.left = obsticalLeft + 'px'
+        topObstical.style.left = obsticalLeft + 'px'
         obstical.style.bottom = obsticalBottom + 'px'
+        topObstical.style.bottom = obsticalBottom + gap + 'px'
 
         /** moving obstical from right to left */
         function moveObstical() {
             obsticalLeft -= 2
             obstical.style.left = obsticalLeft + 'px'
+            topObstical.style.left = obsticalLeft + 'px'
 
             // remove obstical after leaving game area
             if (obsticalLeft === -60) {
                 clearInterval(timerId)
                 gameDisplay.removeChild(obstical)
+                gameDisplay.removeChild(topObstical)
             }
             if (obsticalLeft > 200 && obsticalLeft < 270 &&
-                birdBottom < obsticalBottom + 152 || 
+                (birdBottom < obsticalBottom + 152 || birdBottom > obsticalBottom + gap -200) |
                 birdBottom === 0 
                 ) {
                 gameOver()
