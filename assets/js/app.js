@@ -31,13 +31,14 @@ document.addEventListener('DOMContentLoaded' , () => {
      */
     let gameTimerId = setInterval(startGame, 20)
 
-    /** space bar jumping */
+    /** Space bar jump trigger */
     function control(e) {
         if (e.keyCode === 32){
             jump()
         }
     }
 
+    /** Makes the bird jump */
     function jump() {
         // Creates a ceiling for the bird
         if (birdBottom < 500) 
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     }
     document.addEventListener('keyup', control)
 
+    /**Generates obsticals at random hights, moving at a constant pace left */
     function generateObstical () {
         let obsticalLeft = 500
         // random hight in generation
@@ -69,8 +71,9 @@ document.addEventListener('DOMContentLoaded' , () => {
                 clearInterval(timerId)
                 gameDisplay.removeChild(obstical)
             }
-            if ( obsticalLeft > 200 && obsticalLeft < 280 ||
-                birdBottom === 0
+            if (obsticalLeft > 200 && obsticalLeft < 270 &&
+                birdBottom < obsticalBottom + 152 || 
+                birdBottom === 0 
                 ) {
                 gameOver()
                 clearInterval(timerId)
@@ -83,6 +86,7 @@ document.addEventListener('DOMContentLoaded' , () => {
 
     generateObstical()
 
+    /** end game function */
     function gameOver() {
         clearInterval(gameTimerId)
         console.log('game over')
