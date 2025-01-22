@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     let birdLeft = 220
     let birdBottom = 100
     let gravity = 2
-    let gap = 400
+    let gap = 450
 
     let isGameOver = false
 
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded' , () => {
                 gameDisplay.removeChild(topObstical)
             }
             if (obsticalLeft > 200 && obsticalLeft < 270 &&
-                (birdBottom < obsticalBottom + 152 || birdBottom > obsticalBottom + gap -200) |
+                (birdBottom < obsticalBottom + 152 || birdBottom > obsticalBottom + gap -200) ||
                 birdBottom === 0 
                 ) {
                 gameOver()
