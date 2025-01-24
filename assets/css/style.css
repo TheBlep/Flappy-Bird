@@ -22,7 +22,7 @@ body{
 }
 
 .border-left{
-    width: 100px;
+    width: 60px;
     height: 790px;
     position: relative;
     background-color: white;
@@ -30,7 +30,7 @@ body{
 }
 
 .border-right{
-    width: 100px;
+    width: 60px;
     height: 790px;
     position: relative;
     background-color: white;
@@ -91,14 +91,14 @@ body{
         top: 0px;
     }
     .border-left{
-        width: 50px;
+        width: 60px;
         height: 790px;
         position: relative;
         background-color: white;
         z-index: +2;
     }
     .border-right{
-        width: 50px;
+        width:60px;
         height: 790px;
         position: relative;
         background-color: white;
