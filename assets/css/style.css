@@ -1,6 +1,12 @@
 body{
     display: flex;
+    margin:0; 
     justify-content: center;
+}
+.mainprogress {
+    padding:0;
+    margin:0;
+    float: left;
 }
 
 /**for normal screens**/
@@ -76,14 +82,14 @@ body{
 }
 
  /**For phones**/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     .game-container{
-        width: 460px;
+        width: 500px;
         height: 730px;
         position: relative;
     }
     .border-top{
-        width: 560px;
+        width: 500px;
         height: 10px;
         position: absolute;
         background-color: white;
@@ -91,14 +97,14 @@ body{
         top: 0px;
     }
     .border-left{
-        width: 60px;
+        width: 0px;
         height: 790px;
         position: relative;
         background-color: white;
         z-index: +2;
     }
     .border-right{
-        width:60px;
+        width: 0px;
         height: 790px;
         position: relative;
         background-color: white;
@@ -125,6 +131,7 @@ body{
         position: absolute;
         width: 50px;
         height: 50px;
+        left: -20px;
     }
     
     .obstical{
