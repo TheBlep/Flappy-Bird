@@ -104,5 +104,6 @@ document.addEventListener('DOMContentLoaded' , () => {
         console.log('game over')
         isGameOver = true
         document.removeEventListener('keyup', control)
+        document.removeEventListener('touchstart', jump)
     }
 })
