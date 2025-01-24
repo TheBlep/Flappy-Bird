@@ -33,11 +33,12 @@ document.addEventListener('DOMContentLoaded' , () => {
     let gameTimerId = setInterval(startGame, 20)
 
     /** Space bar jump trigger */
-    function control(e){
+    function control(e, ontouchstart){
         if (e.keyCode === 32 || ontouchstart()){
             jump()
         }
     }
+    /**document.getElementsByTagName("body").ontouchstart = jump;**/
 
     /** Makes the bird jump */
     function jump() {
