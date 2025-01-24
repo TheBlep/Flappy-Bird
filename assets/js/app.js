@@ -34,9 +34,10 @@ document.addEventListener('DOMContentLoaded' , () => {
 
     /** Space bar jump trigger */
     function control(e) {
-        if (e.keyCode === 32){
+        jump()
+        /*if (e.keyCode === 32){
             jump()
-        }
+        }*/
     }
 
     /** Makes the bird jump */
