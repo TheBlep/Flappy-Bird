@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded' , () => {
     let gameTimerId = setInterval(startGame, 20)
 
     /** Space bar jump trigger */
-    function control(e, ontouchstart){
-        if (e.keyCode === 32 || ontouchstart()){
+    function control(e){
+        if (e.keyCode === 32){
             jump()
         }
     }
@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded' , () => {
         
     }
     document.addEventListener('keyup', control)
+    document.addEventListener('touchstart', jump)
 
     /**Generates obsticals at random hights, moving at a constant pace left */
     function generateObstical () {
