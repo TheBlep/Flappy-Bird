@@ -1,7 +1,7 @@
 /**
  * All javascript is run once content has been loaded.
  */
-document.addEventListener('DOMContentLoaded' , () => {
+document.addEventListener('DOMContentLoaded', () => {
     /**
      * Setting Constants for the script to use
      */
@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded' , () => {
         bird.style.bottom = birdBottom + 'px'
         bird.style.left = birdLeft + 'px'
 
-      }
-    
+    }
+
     /**
      * Let the game interval start every 20ms, used to simulate
      * gravity using the birdBottom -= gravity
@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded' , () => {
     let gameTimerId = setInterval(startGame, 20)
 
     /** Space bar jump trigger */
-    function control(e){
-        if (e.keyCode === 32){
+    function control(e) {
+        if (e.keyCode === 32) {
             jump()
         }
     }
@@ -43,24 +43,24 @@ document.addEventListener('DOMContentLoaded' , () => {
     /** Makes the bird jump */
     function jump() {
         // Creates a ceiling for the bird
-        if (birdBottom < 500) 
+        if (birdBottom < 500)
             // Adds 50px to bird bottom to use as a jump
             birdBottom += 50
-            bird.style.bottom = birdBottom + 'px'
-        
+        bird.style.bottom = birdBottom + 'px'
+
     }
     document.addEventListener('keyup', control)
     document.addEventListener('touchstart', jump)
 
     /**Generates obsticals at random hights, moving at a constant pace left */
-    function generateObstical () {
+    function generateObstical() {
         let obsticalLeft = 500
         // random hight in generation
         let randomHeight = Math.random() * 60
         let obsticalBottom = randomHeight
         const obstical = document.createElement('div')
         const topObstical = document.createElement('div')
-        if (!isGameOver){
+        if (!isGameOver) {
             obstical.classList.add('obstical')
             topObstical.classList.add('topObstical')
         }
@@ -84,12 +84,12 @@ document.addEventListener('DOMContentLoaded' , () => {
                 gameDisplay.removeChild(topObstical)
             }
             if (obsticalLeft > 200 && obsticalLeft < 270 &&
-                (birdBottom < obsticalBottom + 152 || birdBottom > obsticalBottom + gap -200) ||
-                birdBottom === 0 
-                ) {
+                (birdBottom < obsticalBottom + 152 || birdBottom > obsticalBottom + gap - 200) ||
+                birdBottom === 0
+            ) {
                 gameOver()
                 clearInterval(timerId)
-                
+
             }
         }
         let timerId = setInterval(moveObstical, 20)
