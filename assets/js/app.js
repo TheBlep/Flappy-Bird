@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         birdBottom -= gravity
         bird.style.bottom = birdBottom + 'px'
         bird.style.left = birdLeft + 'px'
+        setInterval(gameTimerId, 20)
         
     }
 
@@ -90,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 birdBottom === 0
             ) {
                 gameOver()
-                clearInterval(gameTimerId)
+                clearInterval(timerId)
 
             }
         }
@@ -110,6 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.removeEventListener('touchstart', jump)
     }
     
-    /**button.onclick = function(){startGame};**/
-    button.addEventListener("click", startGame, !isGameOver,timerId = );
+    /**button.onclick( gameTimerId = setInterval( startGame, 20));**/
+    /**button.addEventListener("click", gameTimerId = setInterval( startGame, 20));**/
 })
