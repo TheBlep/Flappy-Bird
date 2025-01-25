@@ -10,7 +10,33 @@ body {
     float: left;
 }
 
-/**for normal screens**/
+/**For above 500px screen wide**/
+.button{
+    z-index: +3;
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 180px;
+    height: 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.4s;
+    position: absolute;
+    top: 620px;
+    left: 170px;
+
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+
+  }
+
 .border-top {
     width: 700px;
     height: 50px;
@@ -82,7 +108,7 @@ body {
     position: absolute;
 }
 
-/**For phones**/
+/**For below 500px screen width**/
 @media screen and (max-width: 500px) {
     .game-container {
         width: 500px;

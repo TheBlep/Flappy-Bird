@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     const bird = document.querySelector('.bird')
     const gameDisplay = document.querySelector('.game-container')
-    const ground = document.querySelector('.ground')
+    const button = document.querySelector('.button')
+    /**const ground = document.querySelector('.ground')**/
+    
 
     let birdLeft = 220
     let birdBottom = 100
@@ -23,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         birdBottom -= gravity
         bird.style.bottom = birdBottom + 'px'
         bird.style.left = birdLeft + 'px'
-
+        
     }
 
     /**
@@ -88,12 +90,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 birdBottom === 0
             ) {
                 gameOver()
-                clearInterval(timerId)
+                clearInterval(gameTimerId)
 
             }
         }
         let timerId = setInterval(moveObstical, 20)
         if (!isGameOver) setTimeout(generateObstical, 3000)
+        if (isGameOver) alert("You failed")
     }
 
     generateObstical()
@@ -106,4 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.removeEventListener('keyup', control)
         document.removeEventListener('touchstart', jump)
     }
+    
+    /**button.onclick = function(){startGame};**/
+    button.addEventListener("click", startGame, !isGameOver,timerId = );
 })
