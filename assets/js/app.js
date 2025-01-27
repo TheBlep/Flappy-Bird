@@ -4,14 +4,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     bird = document.querySelector('.bird')
     gameDisplay = document.querySelector('.game-container')
-    button = document.querySelector('.button')
-    gameTimerId = setInterval(gameLoop, 20)
+    resetButton = document.querySelector('.resetButton')
     setUp()
 
     /** Button function to restart game */
-    button.onclick = function () {
+    //resetButton.addEventListener("click", console.log("isclicked2"));
+    //object.addEventListener("click", myScript);
+    resetButton.onclick = function () {
         console.log('isclicked')
         setUp()
+        resetButton.blur()
         //gameTimerId = setInterval(startGame, 20),
         //generateObstical(),
         //isGameOver=false,
@@ -25,17 +27,18 @@ let birdLeft = 220
 let birdBottom = 100
 let gravity = 2
 let gap = 450
-
+let obsticalList = []
 let isGameOver = false
 
 let bird = document.querySelector('.bird')
 let gameDisplay = document.querySelector('.game-container')
-let button = document.querySelector('.button')
+let resetButton = document.querySelector('.button')
 
 
 /**Used to reset variables**/
 function setUp() {
-
+    
+    gameTimerId = setInterval(gameLoop, 20)
     birdLeft = 220
     birdBottom = 100
     gravity = 2
@@ -82,6 +85,8 @@ function jump() {
 
 }
 
+
+
 /**Generates obsticals at random hights, moving at a constant pace left */
 function generateObstical() {
     let timerId = setInterval(moveObstical, 20)
@@ -126,6 +131,7 @@ function generateObstical() {
 
     if (!isGameOver) setTimeout(generateObstical, 3000)
     if (isGameOver) alert("You failed")
+    
 }
 
 /** end game function */
@@ -137,4 +143,3 @@ function gameOver() {
     document.removeEventListener('touchstart', jump)
 }
 
-//button.addEventListener("click", myScript);

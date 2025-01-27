@@ -11,7 +11,7 @@ body {
 }
 
 /**For above 500px screen wide**/
-.button{
+.resetButton{
     z-index: +3;
     background-color: #04AA6D; /* Green */
     border: none;
@@ -31,7 +31,7 @@ body {
 
 }
 
-.button:hover {
+.resetButton:hover {
     background-color: black;
     color: white;
 
