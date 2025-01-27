@@ -72,8 +72,8 @@ body {
     float: left;
 }
 
-/**For above 500px screen wide**/
-.gameButton{
+/*On game buttons*/
+.resetButton{
     z-index: +3;
     background-color: #04AA6D; /* Green */
     border: none;
@@ -88,16 +88,45 @@ body {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     transition-duration: 0.4s;
     position: absolute;
-    top: 620px;
+    top: 670px;
     left: 170px;
 
 }
 
-.gameButton:hover {
+.resetButton:hover {
     background-color: black;
     color: white;
 
   }
+
+/*jump button styles*/
+.jumpButton{
+    z-index: +3;
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 180px;
+    height: 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.4s;
+    position: absolute;
+    top: 610px;
+    left: 170px;
+
+}
+
+.jumpButton:hover {
+    background-color: black;
+    color: white;
+
+  }
+
+/*page styles*/
 
 .border-top {
     width: 700px;

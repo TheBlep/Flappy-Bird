@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     bird = document.querySelector('.bird')
     gameDisplay = document.querySelector('.game-container')
     resetButton = document.querySelector('.resetButton')
-    startGame()
+    
+     startGame()
 
     /** Button function to restart game */
     resetButton.onclick = function () {
@@ -29,6 +30,7 @@ let isGameOver = false
 let bird = document.querySelector('.bird')
 let gameDisplay = document.querySelector('.game-container')
 let resetButton = document.querySelector('.button')
+let jumpButton = document.querySelector('.jumpButton')
 
 /**Used to reset game**/
 function startGame() {
@@ -61,6 +63,11 @@ function control(e) {
         jump()
     }
 }
+// jumpButton.onclick = function () {
+//     console.log('You jumped')
+//     jump()
+    
+// };
 
 /** Makes the bird jump */
 function jump() {
