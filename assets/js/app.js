@@ -60,8 +60,11 @@ function startGame() {
     generateObstical()
 
     jumpButton.onclick = function () {
+        if (!isGameOver){
         console.log('You jumped')
         jump()
+        }
+    
     }
 
 }
@@ -131,16 +134,20 @@ function generateObstical() {
 }
 
 function resetObstical() {
-    let obsticals = document.getElementsByClassName('obstical')
-    let topObsticals = document.getElementsByClassName('topObstical')
-    for (let i = 0; i < obsticals.length; i++) {
-        gameDisplay.removeChild(obsticals[i])
-        gameDisplay.removeChild(topObsticals[i])
-    }
+    document.querySelectorAll('.obstical').forEach(e => e.remove());
+    document.querySelectorAll('.topObstical').forEach(e => e.remove());
+    // let obsticals = document.getElementsByClassName('obstical')
+    // let topObsticals = document.getElementsByClassName('topObstical')
+    // for (let i = 0; i < obsticals.length; i++) {
+    //     gameDisplay.removeChild(obsticals[i])
+    //     gameDisplay.removeChild(topObsticals[i])
+    // }
+
 }
 
 /** End game function */
 function gameOver() {
+    
 
     for (let i = 0; i < moveObsticalTimers.length; i++) {
         clearInterval(moveObsticalTimers[i])
@@ -150,7 +157,8 @@ function gameOver() {
     console.log('game over')
 
     isGameOver = true
-    document.removeEventListener('touchstart', jump)
+    jumpButton = null
+    
 }
 
 // Get the modal
