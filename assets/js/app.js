@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         startGame()
         resetButton.blur()
         
+        
     };
 })
 
@@ -19,7 +20,6 @@ let birdLeft = 220
 let birdBottom = 100
 let gravity = 2
 let gap = 450
-let obsticalList = []
 let isGameOver = false
 
 let bird = document.querySelector('.bird')
@@ -29,7 +29,7 @@ let resetButton = document.querySelector('.button')
 
 /**Used to reset game**/
 function startGame() {
-
+    resetObstical()
     gameTimerId = setInterval(gameLoop, 20)
     birdLeft = 220
     birdBottom = 100
@@ -91,12 +91,16 @@ function generateObstical() {
 
     /** moving obstical from right to left */
     function moveObstical() {
+        if (isGameOver) {
+            clearInterval(timerId)
+            return
+        }
         obsticalLeft -= 2
         obstical.style.left = obsticalLeft + 'px'
         topObstical.style.left = obsticalLeft + 'px'
 
         // remove obstical after leaving game area
-        if (obsticalLeft === -60) {
+        if (obsticalLeft === -60){
             clearInterval(timerId)
             gameDisplay.removeChild(obstical)
             gameDisplay.removeChild(topObstical)
@@ -107,13 +111,20 @@ function generateObstical() {
         ) {
             gameOver()
             clearInterval(timerId)
-
+            alert("You failed")
         }
     }
 
     if (!isGameOver) setTimeout(generateObstical, 3000)
-    if (isGameOver) alert("You failed")
 
+}
+function resetObstical(){
+    let obsticals = document.getElementsByClassName('obstical')
+    let topObsticals = document.getElementsByClassName('topObstical')
+    for(var i= 0; i < obsticals.length; i++){
+        gameDisplay.removeChild(obsticals[i])
+        gameDisplay.removeChild(topObsticals[i])
+    }
 }
 
 /** end game function */
