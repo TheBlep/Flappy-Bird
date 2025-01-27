@@ -18,8 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.style.display = "none";
         }
     }
-
-
+    // Starts the game
     startGame()
 
     /** Button function to restart game */
@@ -126,7 +125,6 @@ function generateObstical() {
             birdBottom === 0
         ) {
             gameOver()
-            //alert("You failed")
             popup()
         }
     }
@@ -135,7 +133,7 @@ function generateObstical() {
 function resetObstical() {
     let obsticals = document.getElementsByClassName('obstical')
     let topObsticals = document.getElementsByClassName('topObstical')
-    for (var i = 0; i < obsticals.length; i++) {
+    for (let i = 0; i < obsticals.length; i++) {
         gameDisplay.removeChild(obsticals[i])
         gameDisplay.removeChild(topObsticals[i])
     }
@@ -144,7 +142,7 @@ function resetObstical() {
 /** End game function */
 function gameOver() {
 
-    for (var i = 0; i < moveObsticalTimers.length; i++) {
+    for (let i = 0; i < moveObsticalTimers.length; i++) {
         clearInterval(moveObsticalTimers[i])
     }
     clearInterval(gameTimerId)
