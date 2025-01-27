@@ -4,6 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
     gameDisplay = document.querySelector('.game-container')
     resetButton = document.querySelector('.resetButton')
     jumpButton = document.querySelector('.jumpButton')
+    modal = document.getElementById("myModal");
+    span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
 
     startGame()
 
@@ -28,6 +43,8 @@ let bird = document.querySelector('.bird')
 let gameDisplay = document.querySelector('.game-container')
 let resetButton = document.querySelector('.button')
 let jumpButton = document.querySelector('.jumpButton')
+let modal = document.getElementById("myModal");
+let span = document.getElementsByClassName("close")[0];
 
 /**Used to reset game**/
 function startGame() {
@@ -42,12 +59,12 @@ function startGame() {
     isGameOver = false
 
     generateObstical()
-    
+
     jumpButton.onclick = function () {
         console.log('You jumped')
         jump()
-        }
-    
+    }
+
 }
 
 /**Game function loop, 20ms**/
@@ -93,13 +110,13 @@ function generateObstical() {
 
     /** moving obstical from right to left */
     function moveObstical() {
-       
+
         obsticalLeft -= 2
         obstical.style.left = obsticalLeft + 'px'
         topObstical.style.left = obsticalLeft + 'px'
 
         // remove obstical after leaving game area
-        if (obsticalLeft === -60){
+        if (obsticalLeft === -60) {
             clearInterval(timerId)
             gameDisplay.removeChild(obstical)
             gameDisplay.removeChild(topObstical)
@@ -109,15 +126,16 @@ function generateObstical() {
             birdBottom === 0
         ) {
             gameOver()
-            alert("You failed")
+            //alert("You failed")
+            popup()
         }
     }
 }
 
-function resetObstical(){
+function resetObstical() {
     let obsticals = document.getElementsByClassName('obstical')
     let topObsticals = document.getElementsByClassName('topObstical')
-    for(var i= 0; i < obsticals.length; i++){
+    for (var i = 0; i < obsticals.length; i++) {
         gameDisplay.removeChild(obsticals[i])
         gameDisplay.removeChild(topObsticals[i])
     }
@@ -125,12 +143,22 @@ function resetObstical(){
 
 /** End game function */
 function gameOver() {
-    for(var i= 0; i < moveObsticalTimers.length; i++){
+
+    for (var i = 0; i < moveObsticalTimers.length; i++) {
         clearInterval(moveObsticalTimers[i])
     }
     clearInterval(gameTimerId)
     clearInterval(generationId)
     console.log('game over')
+
     isGameOver = true
     document.removeEventListener('touchstart', jump)
+}
+
+// Get the modal
+
+
+// When the user clicks on the button, open the modal
+function popup() {
+    modal.style.display = "block";
 }
