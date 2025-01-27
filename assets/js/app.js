@@ -1,18 +1,15 @@
- 
- 
- 
- 
- 
- //Start game once content is loaded.
+//Start game once content is loaded.
 document.addEventListener('DOMContentLoaded', () => {
     bird = document.querySelector('.bird')
     gameDisplay = document.querySelector('.game-container')
     resetButton = document.querySelector('.resetButton')
-    
+    jumpButton = document.querySelector('.jumpButton')
+
      startGame()
 
     /** Button function to restart game */
     resetButton.onclick = function () {
+        gameOver()
         console.log('isclicked')
         startGame()
         resetButton.blur()
@@ -26,6 +23,7 @@ let birdBottom = 100
 let gravity = 2
 let gap = 450
 let isGameOver = false
+let moveObsticalTimers = []
 
 let bird = document.querySelector('.bird')
 let gameDisplay = document.querySelector('.game-container')
@@ -37,15 +35,21 @@ function startGame() {
     resetObstical()
     gameTimerId = setInterval(gameLoop, 20)
     birdLeft = 220
-    birdBottom = 100
+    birdBottom = 300
     gravity = 2
     gap = 450
 
     isGameOver = false
 
     generateObstical()
-    document.addEventListener('keyup', control)
-    document.addEventListener('touchstart', jump)
+    
+    
+    jumpButton.onclick = function () {
+        console.log('You jumped')
+        jump()
+        }
+    //document.addEventListener('keyup', control) /** this needs to be removed or change fo rallow button to do things */
+    
 }
 
 /**Game function loop, 20ms**/
@@ -58,16 +62,7 @@ function gameLoop() {
 }
 
 /** Space bar jump trigger */
-function control(e) {
-    if (e.keyCode === 32) {
-        jump()
-    }
-}
-// jumpButton.onclick = function () {
-//     console.log('You jumped')
-//     jump()
-    
-// };
+
 
 /** Makes the bird jump */
 function jump() {
@@ -82,6 +77,8 @@ function jump() {
 /**Generates obsticals at random hights, moving at a constant pace left */
 function generateObstical() {
     let timerId = setInterval(moveObstical, 20)
+    moveObsticalTimers.push(timerId);
+    console.log(timerId)
     let obsticalLeft = 500
     // random hight in generation
     let randomHeight = Math.random() * 60
@@ -101,10 +98,7 @@ function generateObstical() {
 
     /** moving obstical from right to left */
     function moveObstical() {
-        if (isGameOver) {
-            clearInterval(timerId)
-            return
-        }
+       
         obsticalLeft -= 2
         obstical.style.left = obsticalLeft + 'px'
         topObstical.style.left = obsticalLeft + 'px'
@@ -135,6 +129,10 @@ function resetObstical(){
         gameDisplay.removeChild(obsticals[i])
         gameDisplay.removeChild(topObsticals[i])
     }
+    for(var i= 0; i < moveObsticalTimers.length; i++){
+        clearInterval(moveObsticalTimers[i])
+    }
+
 }
 
 /** End game function */
@@ -142,6 +140,6 @@ function gameOver() {
     clearInterval(gameTimerId)
     console.log('game over')
     isGameOver = true
-    document.removeEventListener('keyup', control)
+    //document.removeEventListener('keyup', control)
     document.removeEventListener('touchstart', jump)
 }
