@@ -1,3 +1,8 @@
+ 
+ 
+ 
+ 
+ 
  //Start game once content is loaded.
 document.addEventListener('DOMContentLoaded', () => {
     bird = document.querySelector('.bird')
@@ -10,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('isclicked')
         startGame()
         resetButton.blur()
-        
         
     };
 })
@@ -25,7 +29,6 @@ let isGameOver = false
 let bird = document.querySelector('.bird')
 let gameDisplay = document.querySelector('.game-container')
 let resetButton = document.querySelector('.button')
-
 
 /**Used to reset game**/
 function startGame() {
@@ -127,7 +130,7 @@ function resetObstical(){
     }
 }
 
-/** end game function */
+/** End game function */
 function gameOver() {
     clearInterval(gameTimerId)
     console.log('game over')
