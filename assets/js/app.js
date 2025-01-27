@@ -1,28 +1,20 @@
-/**
- * All javascript is run once content has been loaded.
- */
+ //Start game once content is loaded.
 document.addEventListener('DOMContentLoaded', () => {
     bird = document.querySelector('.bird')
     gameDisplay = document.querySelector('.game-container')
     resetButton = document.querySelector('.resetButton')
-    setUp()
+    startGame()
 
     /** Button function to restart game */
-    //resetButton.addEventListener("click", console.log("isclicked2"));
-    //object.addEventListener("click", myScript);
     resetButton.onclick = function () {
         console.log('isclicked')
-        setUp()
+        startGame()
         resetButton.blur()
-        //gameTimerId = setInterval(startGame, 20),
-        //generateObstical(),
-        //isGameOver=false,
-        //setUp()
-
+        
     };
 })
 
-//Setting Constants for the script to use
+//Initialization
 let birdLeft = 220
 let birdBottom = 100
 let gravity = 2
@@ -35,9 +27,9 @@ let gameDisplay = document.querySelector('.game-container')
 let resetButton = document.querySelector('.button')
 
 
-/**Used to reset variables**/
-function setUp() {
-    
+/**Used to reset game**/
+function startGame() {
+
     gameTimerId = setInterval(gameLoop, 20)
     birdLeft = 220
     birdBottom = 100
@@ -51,21 +43,14 @@ function setUp() {
     document.addEventListener('touchstart', jump)
 }
 
-/**Function used to play the game**/
+/**Game function loop, 20ms**/
 function gameLoop() {
-    
+
     birdBottom -= gravity
     bird.style.bottom = birdBottom + 'px'
     bird.style.left = birdLeft + 'px'
-    
+
 }
-
-
-
-/**Let the game interval start every 20ms, used to simulate
- * gravity using the birdBottom -= gravity
- */
-
 
 /** Space bar jump trigger */
 function control(e) {
@@ -73,7 +58,6 @@ function control(e) {
         jump()
     }
 }
-
 
 /** Makes the bird jump */
 function jump() {
@@ -84,8 +68,6 @@ function jump() {
     bird.style.bottom = birdBottom + 'px'
 
 }
-
-
 
 /**Generates obsticals at random hights, moving at a constant pace left */
 function generateObstical() {
@@ -131,7 +113,7 @@ function generateObstical() {
 
     if (!isGameOver) setTimeout(generateObstical, 3000)
     if (isGameOver) alert("You failed")
-    
+
 }
 
 /** end game function */
@@ -142,4 +124,3 @@ function gameOver() {
     document.removeEventListener('keyup', control)
     document.removeEventListener('touchstart', jump)
 }
-
