@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     resetButton = document.querySelector('.resetButton')
     jumpButton = document.querySelector('.jumpButton')
 
-     startGame()
+    startGame()
 
     /** Button function to restart game */
     resetButton.onclick = function () {
@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('isclicked')
         startGame()
         resetButton.blur()
-        
     };
 })
 
@@ -34,6 +33,7 @@ let jumpButton = document.querySelector('.jumpButton')
 function startGame() {
     resetObstical()
     gameTimerId = setInterval(gameLoop, 20)
+    generationId = setInterval(generateObstical, 3000)
     birdLeft = 220
     birdBottom = 300
     gravity = 2
@@ -43,12 +43,10 @@ function startGame() {
 
     generateObstical()
     
-    
     jumpButton.onclick = function () {
         console.log('You jumped')
         jump()
         }
-    //document.addEventListener('keyup', control) /** this needs to be removed or change fo rallow button to do things */
     
 }
 
@@ -60,9 +58,6 @@ function gameLoop() {
     bird.style.left = birdLeft + 'px'
 
 }
-
-/** Space bar jump trigger */
-
 
 /** Makes the bird jump */
 function jump() {
@@ -114,14 +109,11 @@ function generateObstical() {
             birdBottom === 0
         ) {
             gameOver()
-            clearInterval(timerId)
             alert("You failed")
         }
     }
-
-    if (!isGameOver) setTimeout(generateObstical, 3000)
-
 }
+
 function resetObstical(){
     let obsticals = document.getElementsByClassName('obstical')
     let topObsticals = document.getElementsByClassName('topObstical')
@@ -129,17 +121,16 @@ function resetObstical(){
         gameDisplay.removeChild(obsticals[i])
         gameDisplay.removeChild(topObsticals[i])
     }
-    for(var i= 0; i < moveObsticalTimers.length; i++){
-        clearInterval(moveObsticalTimers[i])
-    }
-
 }
 
 /** End game function */
 function gameOver() {
+    for(var i= 0; i < moveObsticalTimers.length; i++){
+        clearInterval(moveObsticalTimers[i])
+    }
     clearInterval(gameTimerId)
+    clearInterval(generationId)
     console.log('game over')
     isGameOver = true
-    //document.removeEventListener('keyup', control)
     document.removeEventListener('touchstart', jump)
 }
