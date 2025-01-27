@@ -1,4 +1,4 @@
-//Start game once content is loaded.
+// Start game once content is loaded.
 document.addEventListener('DOMContentLoaded', () => {
     bird = document.querySelector('.bird')
     gameDisplay = document.querySelector('.game-container')
@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     modal = document.getElementById("myModal");
     span = document.getElementsByClassName("close")[0];
 
-    // When the user clicks on <span> (x), close the modal
+    // When the user clicks on <span> (x), close the modal (For endgame)
     span.onclick = function () {
         modal.style.display = "none";
     }
 
-    // When the user clicks anywhere outside of the modal, close it
+    // When the user clicks anywhere outside of the modal, close it (for endgame)
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 })
 
-//Initialization
+// Initialization
 let birdLeft = 220
 let birdBottom = 100
 let gravity = 2
@@ -45,7 +45,7 @@ let jumpButton = document.querySelector('.jumpButton')
 let modal = document.getElementById("myModal");
 let span = document.getElementsByClassName("close")[0];
 
-/**Used to reset game**/
+/** Used to reset game**/
 function startGame() {
     resetObstical()
     gameTimerId = setInterval(gameLoop, 20)
@@ -64,12 +64,10 @@ function startGame() {
         console.log('You jumped')
         jump()
         }
-    
     }
-
 }
 
-/**Game function loop, 20ms**/
+/** Game function loop, 20ms**/
 function gameLoop() {
 
     birdBottom -= gravity
@@ -88,7 +86,7 @@ function jump() {
 
 }
 
-/**Generates obsticals at random hights, moving at a constant pace left */
+/** Generates obsticals at random hights, moving at a constant pace left */
 function generateObstical() {
     let timerId = setInterval(moveObstical, 20)
     moveObsticalTimers.push(timerId);
@@ -103,6 +101,7 @@ function generateObstical() {
         obstical.classList.add('obstical')
         topObstical.classList.add('topObstical')
     }
+    // Insert obstical divs
     gameDisplay.appendChild(obstical)
     gameDisplay.appendChild(topObstical)
     obstical.style.left = obsticalLeft + 'px'
@@ -110,14 +109,14 @@ function generateObstical() {
     obstical.style.bottom = obsticalBottom + 'px'
     topObstical.style.bottom = obsticalBottom + gap + 'px'
 
-    /** moving obstical from right to left */
+    /** moving obsticals from right to left */
     function moveObstical() {
 
         obsticalLeft -= 2
         obstical.style.left = obsticalLeft + 'px'
         topObstical.style.left = obsticalLeft + 'px'
 
-        // remove obstical after leaving game area
+        // Remove obstical after leaving game area
         if (obsticalLeft === -60) {
             clearInterval(timerId)
             gameDisplay.removeChild(obstical)
@@ -132,23 +131,17 @@ function generateObstical() {
         }
     }
 }
-
+/** Remove all obsticals */
 function resetObstical() {
     document.querySelectorAll('.obstical').forEach(e => e.remove());
     document.querySelectorAll('.topObstical').forEach(e => e.remove());
-    // let obsticals = document.getElementsByClassName('obstical')
-    // let topObsticals = document.getElementsByClassName('topObstical')
-    // for (let i = 0; i < obsticals.length; i++) {
-    //     gameDisplay.removeChild(obsticals[i])
-    //     gameDisplay.removeChild(topObsticals[i])
-    // }
+  
 
 }
 
 /** End game function */
 function gameOver() {
-    
-
+    // Clear all timers
     for (let i = 0; i < moveObsticalTimers.length; i++) {
         clearInterval(moveObsticalTimers[i])
     }
@@ -161,10 +154,7 @@ function gameOver() {
     
 }
 
-// Get the modal
-
-
-// When the user clicks on the button, open the modal
+/** Modal popup for endgame */
 function popup() {
     modal.style.display = "block";
 }
