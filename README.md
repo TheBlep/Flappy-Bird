@@ -2,7 +2,7 @@
   <img src="assets/images/title.png" style="background-color: black" alt="Flappy bird!">
 </div>
 <div align="center">
-  <img src="../Flappy-Bird/assets/images/game-mockup.png" alt="Home Page">
+  <img src="assets/images/game-mockup.png" alt="Home Page">
 </div>
 
 [Flappy Bird!](https://theblep.github.io/Flappy-Bird/) is a simple and addictive browser game, replicating the classic Flappy Bird experience. Built using HTML, CSS, and JavaScript, it allows users to test their reflexes and enjoy a retro gaming vibe. The goal is to navigate the bird through obstacles without crashing. The minimalist design mimiks retro in browser games from the 2010s while still providing a fun experiance. 
@@ -170,7 +170,7 @@ The Business Goals of the "Flappy Bird Game" website are:
 
 ## Visual Design
 <div align="center">
-  <img src="../Flappy-Bird/assets/images/welcome-mockup.png" alt="gamepage">
+  <img src="assets/images/welcome-mockup.png" alt="gamepage">
 </div>
 
 ### Frameworks
@@ -179,7 +179,7 @@ A tuttorial to understand the logic behind flappy bird was used as a base for th
 
 ### Fonts
 <div align="center">
-  <img src="../Flappy-Bird/assets/images/welcome-page-small.png" alt="Fonts">
+  <img src="assets/images/welcome-page-small.png" alt="Fonts">
 </div>
 
 - The primary font, Arial was chosen because it seemed to fit well with the minimal look of the website.
@@ -187,7 +187,7 @@ A tuttorial to understand the logic behind flappy bird was used as a base for th
 
 ### Colors
 <div align="center">
-  <img src="../Flappy-Bird/assets/images/color-pallet-flappy.png" alt="Color Pallette">
+  <img src="assets/images/color-pallet-flappy.png" alt="Color Pallette">
 </div>
 
 - Background: Sky blue for a vibrant and inviting atmosphere on both the welcome page and the game page itself
@@ -197,14 +197,14 @@ A tuttorial to understand the logic behind flappy bird was used as a base for th
 
 ### Images
 <div align="center">
-  <img src="../Flappy-Bird/assets/images/flappy-bird.png" alt="Game sprite">
-  <img src="../Flappy-Bird/assets/images/flappybird-pipe.png" alt="Pipe">
-  <img src="../Flappy-Bird/assets/images/fb-game-background.png" alt="Sky">
-  <img src="../Flappy-Bird/assets/images/bottom-background.png" alt="Ground">
+  <img src="assets/images/flappy-bird.png" alt="Game sprite">
+  <img src="assets/images/flappybird-pipe.png" alt="Pipe">
+  <img src="assets/images/fb-game-background.png" alt="Sky">
+  <img src="assets/images/bottom-background.png" alt="Ground">
 </div>
 
 - The game uses simple 2D graphics created with HTML canvas. These graphics are taken from the [tutorial repository](https://github.com/kubowania/flappy-bird)
-- there was thought to change the game to "flappy Kirby" to show my love for the game character.<img src="../Flappy-Bird/assets/images/" alt="kirby">
+- there was thought to change the game to "flappy Kirby" to show my love for the game character.<img src="assets/images/" alt="kirby">
 
 
 ### Styling
@@ -271,19 +271,19 @@ A tuttorial to understand the logic behind flappy bird was used as a base for th
 ### Validation
 - HTML has been validated with [W3C HTML5 Validator](https://validator.w3.org/). No errors
 <div align="center">
-  <img src="../Flappy-Bird/assets/images/w3.org-check-success.png" alt="HTMLvalidation">
+  <img src="assets/images/w3.org-check-success.png" alt="HTMLvalidation">
 </div>
 
 - CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) No errors
 
 <div align="center">
-  <img src="../Flappy-Bird/assets/images/css-val.png" alt="CSSvalidation">
+  <img src="assets/images/css-val.png" alt="CSSvalidation">
 </div>
 
 - JavaScript has been validated with [JSHint](https://jshint.com/) No errors
 - Accessabilit validated with [Pagespeed](https://pagespeed.web.dev/) 100% accessabiltiy on all pages
 <div align="center">
-  <img src="../Flappy-Bird/assets/images/access.png" alt="accessability-validation">
+  <img src="assets/images/access.png" alt="accessability-validation">
 </div>
 
 ### General Testing
