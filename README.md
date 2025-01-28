@@ -36,7 +36,7 @@
     <summary><a href="#features">Features</a></summary>
 
     <ul>
-    <li><details>
+    <!-- <li><details>
     <summary><a href="#page-elements">Page Elements</a></summary>
 
     - [All Pages](#all-pages)
@@ -50,7 +50,7 @@
 
     - [Image Loading Blur](#image-loading-blur)
     - [Email](#email)
-    </details></li>
+    </details></li> -->
 
     <li><details>
     <summary><a href="#feature-ideas">Feature Ideas</a></summary>
@@ -67,7 +67,6 @@
     - [Languages](#languages)
     - [Frameworks](#frameworks)
     - [Libraries](#libraries)
-    - [APIs](#apis)
     - [Platforms](#platforms)
     - [Other Tools](#other-tools)
 </details>
