@@ -35,7 +35,7 @@ p {
 }
 
 /* Style for welcome screen button */
-.welcomeButton {
+a.welcomeButton {
     background: #ff6f61;
     color: white;
     border: none;
@@ -44,10 +44,12 @@ p {
     cursor: pointer;
     font-size: 1.2rem;
     transition: background 0.3s;
+    text-decoration: none;
 }
 
-.welcomeButton:hover {
+a.welcomeButton:hover {
     background: #ff5a49;
+    text-decoration: none;
 }
 
 
