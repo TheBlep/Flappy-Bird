@@ -1,11 +1,11 @@
 <div align="center">
-  <img src="assets/images/readme-images/title.png" style="background-color: black" alt="The History of Blender">
+  <img src="../Flappy-Bird/assets/images/title.png" style="background-color: black" alt="The History of Blender">
 </div>
 <div align="center">
-  <img src="assets/images/readme-images/index.png" alt="Home Page">
+  <img src="../Flappy-Bird/assets/images/game-mockup.png" alt="Home Page">
 </div>
 
-[The History of Blender](https://theblep.github.io/the-history-of-blender/index.html) is designed as an approachable introduction to Blender's history, offering users a brief yet engaging journey through its evolution. The goal is to provide digestible insights into Blender's past and present, while also sharing resources for those eager to dive deeper into learning. With a friendly, conversational tone, the site feels like a passionate friend sharing their enthusiasm for Blender. Its minimal and focused design keeps the content from feeling overwhelming, emphasizing key milestones and the vibrant community that surrounds Blender 3D.
+[Flappy Bird!](https://theblep.github.io/Flappy-Bird/) is a simple and addictive browser game, replicating the classic Flappy Bird experience. Built using HTML, CSS, and JavaScript, it allows users to test their reflexes and enjoy a retro gaming vibe. The goal is to navigate the bird through obstacles without crashing. The minimalist design mimiks retro in browser games from the 2010s while still providing a fun experiance. 
 
 ## Table of Contents
 1. <details open>
@@ -25,7 +25,6 @@
 
     - [Wireframes](#wireframes)
     - [Fonts](#fonts)
-    - [Icons](#icons)
     - [Colors](#colors)
     - [Images](#images)
     - [Styling](#styling)
@@ -128,168 +127,118 @@
 ## Goals
 ### Visitor Goals
 
-The target audience for "The History of Blender" website includes:
+The target audience for the "Flappy Bird Game" website includes:
 
-- People interested in the history and evolution of Blender.
-- Beginners curious about Blender's origins before starting to learn it.
-- Blender enthusiasts seeking additional resources for further education.
-- Fans of open-source software and its impact on creative tools.
-- Individuals who enjoy blog-style storytelling about technical topics.
+- Casual gamers looking for a quick and fun experience.
+- Fans of the original Flappy Bird game seeking a nostalgic experience.
+- Developers curious about a simple JavaScript-based game implementation.
+- Individuals exploring minimalist game design and mechanics.
 
 User goals are:
 
-- Gain an understanding of Blender's history in a concise, engaging way.
-- Discover key milestones in Blender's development.
-- Explore additional resources for learning more about Blender.
-- Enjoy a friendly, blog-style tone that feels welcoming and approachable.
-- Navigate a clean and minimal site without being overwhelmed by information.
+- Play a functional and enjoyable browser-based game.
+- Experience responsive and smooth gameplay on both desktop and mobile devices.
+- Easily restart the game on gameover.
+- Enjoy a visually appealing yet distraction-free game interface.
 
-The History of Blender" fulfills these needs by:
+The "Flappy Bird Game" fulfills these needs by:
 
-- Introducing users to the site with a clear and friendly tone.
-- Highlighting Blender's past and present through a timeline.
-- Providing links to resources for further exploration, such as tutorials or documentation.
-- Keeping the design minimal and focused, ensuring the information remains digestible.
-- Offering a layout that feels personal, akin to a passionate storyteller sharing their knowledge.
+- Providing an intuitive interface and controls.
+- Offering simple yet challenging gameplay.
+- Maintaining a clean and focused design to enhance user immersion.
+- Supporting various devices with responsive design.
 
+#### Business Goals
 
-### Business Goals
+The Business Goals of the "Flappy Bird Game" website are:
 
-The Business Goals of "The History of Blender" website are:
-- Provide informative content on Blender's history in an engaging and accessible way.
-- Attract a wider audience interested in learning about Blender’s evolution.
-- Offer resources that help users get started with Blender.
-- Potential future revenue from ads displayed on the website.
-- Consider the possibility of selling a plugin or resource that simplifies Blender's introduction for beginners.
+- Showcase a basic game implementation using JavaScript for educational purposes.
+- Attract users interested in casual gaming.
+- Potentially generate revenue through ads or premium features in the future.
+- Provide a portfolio example for developers.
 
 
 ### User Stories
 
-1. As a user interested in learning about Blender, I expect to see a clear and engaging presentation of Blender's history.
-2. I expect the information to be presented in a way that's easy to follow and entertaining.
-3. As a beginner in Blender, I expect to find resources that help me understand its evolution and significance.
-4. As a user interested in the development of open-source tools, I expect to see detailed information about Blender's impact.
-5. As a user interested in the community behind Blender, I expect to learn about its contributors and their influence on the software.
-6. I expect to be able to explore additional resources that can help me dive deeper into Blender's features and capabilities.
-7. As a potential customer, I would like to know about any products, such as a plugin, that could help me get started with Blender.
-8. If I were interested in ads or related offers, I expect them to be relevant to my interests in Blender.
+1. As a casual gamer, I expect the game to be easy to access and play.
+2. As a fan of Flappy Bird, I expect the gameplay to replicate the original experience while offering a smooth interface.
+3. As a developer, I expect to explore the game mechanics and source code.
+4. As a user on mobile, I expect the game to be responsive and enjoyable on touchscreens.
+5. As a beginner, I expect clear instructions on how to start and play the game.
+6. I would like to easily restart the game without refreshing the page.
 
 
 ## Visual Design
+<div align="center">
+  <img src="../Flappy-Bird/assets/images/welcome-mockup.png" alt="gamepage">
+</div>
+
 ### Frameworks
-Templates for HTML framework were made using Chat GPT and edited apon with Bootstrap and code snippets from the course.
+
+A tuttorial to understand the logic behind flappy bird was used as a base for the project. The rest was done using various sources including Chat GPT for boiler plates and W3C for functions/elements as well as timer implementation.
 
 ### Fonts
 <div align="center">
-  <img src="assets/images/readme-images/fontsdesiplay.png" alt="Fonts">
+  <img src="../Flappy-Bird/assets/images/welcome-page-small.png" alt="Fonts">
 </div>
 
-- The primary font, [Oswald](https://fonts.google.com/specimen/Oswald) was chosen because it seemed to fit well with the minimal look of the website.
-- The secondary font, serif was chosen due to its default nature in HTML as well as to simplify the development.
-
-### Icons
-<div align="center">
-  <img src="assets/images/readme-images/footerlinks.png" alt="Icons">
-</div>
-
-- Icons are taken from the [Fontawesome](https://fontawesome.com/) Icon library and are utilised with the "fab fa-..." classes
-- Icons are utilised in the footer for social account icons.
+- The primary font, Arial was chosen because it seemed to fit well with the minimal look of the website.
+- The secondary font, sans-serif was chosen due to its default nature in HTML as well as to simplify the development.
 
 ### Colors
 <div align="center">
-  <img src="assets/images/readme-images/websire-colors.png" alt="Color Pallette">
+  <img src="../Flappy-Bird/assets/images/color-pallet-flappy.png" alt="Color Pallette">
 </div>
 
-- The site is designed with a minimal aesthetic, ensuring the content remains the focus without distractions.
-- White is the primary color, providing a clean backdrop that enhances readability and directs attention to the information.
-- A light accent color, chosen for subtle warmth, is used sparingly to highlight key sections and guide the user’s eye.
-- Text is presented in black or dark grey for clear contrast against the light background, making the content easy to read.
-- A neutral grey color is used for the footer, helping to visually separate it from the main content and maintain a clean layout.
+- Background: Sky blue for a vibrant and inviting atmosphere on both the welcome page and the game page itself
+- Obstacles, sky, bird and ground: The original color scheme of the game was replicated as best as possible.
+- Welcome page: Designed to mimik the game style and create a visual segway, the welcome page uses similar colors to the game page.
 
 
 ### Images
 <div align="center">
-  <img src="assets/images/readme-images/images1.png" alt="First Images">
-  <img src="assets/images/readme-images/images2.png" alt="Second Images">
+  <img src="../Flappy-Bird/assets/images/flappy-bird.png" alt="Game sprite">
+  <img src="../Flappy-Bird/assets/images/flappybird-pipe.png" alt="Pipe">
+  <img src="../Flappy-Bird/assets/images/fb-game-background.png" alt="Sky">
+  <img src="../Flappy-Bird/assets/images/bottom-background.png" alt="Ground">
 </div>
 
-- The site has a large focus on images, showcasing the evolution of visuals developed in Blender.
-- On the home page the images are displayed in three columns responsively, so they can easily be seen on any size device.
-- The images and respective text will automatically space themselves vertically within the column, so the column is never too thin.
+- The game uses simple 2D graphics created with HTML canvas. These graphics are taken from the [tutorial repository](https://github.com/kubowania/flappy-bird)
+- there was thought to change the game to "flappy Kirby" to show my love for the game character.<img src="../Flappy-Bird/assets/images/" alt="kirby">
+
 
 ### Styling
-- For this project I have utilised Bootstrap 5.3 CSS and JS libraries to ease development on the navigation bar, buttons, contact form and content responsivness.
-- The primary and secondary colors have been applied to bootstrap classes for easy use across the site.
+- CSS was used alot to maintain a minimalist design and allow different screen sizes.
+- JavaScript handles dynamic styling and animations during gameplay.
 
 ----
 
 # Features
-## Page Elements
-### All Pages
-#### Navbar
-<div align="center">
-  <img src="assets/images/readme-images/navbar.png" alt="Medium Header">
-  <img src="assets/images/readme-images/navbar-small.png" alt="Small Header">
-</div>
+## Gameplay Elements
 
-- The Navbar is simple, providing only two major options and one contact option.
-- The Logo is always isolated and easy to read, adapting to smaller screens.
-- On smaller devices, the menu becomes collapsible.
-- The mobile nav button has been placed to the right for ease of use with one hand.
+### Game Loop
 
-#### Footer
-<div align="center">
-  <img src="assets/images/readme-images/footer.png" alt="Medium Footer">
-</div>
+- The game operates on a continuous loop, updating the bird's position, detecting collisions, and rendering frames.
 
-- Located at the bottom of every page, highlighting the (non existant) privacy policy and terms of service additionally to the contact page.
-- Made of three columns, changing shape for larger or smaller devices.
+### Obstacles
 
-### Index Page
-#### Short films
-<div align="center">
-  <img src="assets/images/readme-images/short-films.png" alt="About">
-</div>
+- The JS Randomly generates green pipes with varying gaps using an internal timer.
 
-- Minimal and direct approach with information on the first official short films of the Blender institute.
-- Three columns are used with images first to intice the user to continue further and read the text. 
-- Text contains a links to further reading or the short film itself.
+### Restart Functionality
 
-#### What Blender has become
-<div align="center">
-  <img src="assets/images/readme-images/what-become.png" alt="About">
-</div>
+- A restart button allows players to immediately start a new game.
 
-- After the initial image to give a foundation, the "What Blender has become" section presents the contrasting modern status and visuals of Blender
-- Hopefully, the impact will create enough interest to read the further text and/or proceed to the resources page.
-- The section is responsive and the three columns will stack on resize.
+### Mobile Compatibility
 
-### Resource Page
-<div align="center">
-  <img src="assets/images/readme-images/resources.png" alt="Resource Page">
-</div>
-
-- Matching the minimal style of the index page, the resource page contains two rows each with two columns, one image, one text with link.
-- The first row gives a link directly to the Blender home page and further information.
-- The second link sends the user to a few tutorials perfect for beginners wanting to start learning Blender.
-
-### Contact Page
-<div align="center">
-  <img src="assets/images/readme-images/contact.png" alt="Contact page">
-</div>
-
-- A simple page highlighting the contact form that utilises the bootstrap contact form, sending the information to a confirmation page highlighting the information sent.
-- There is an unused "Success page" that could be implemented.
-- Once the send button is pressed, the Code Institute verification page will open, notifying the user what data was sent.
-- Any fields not correctly filled out will yeild an error message, notifying the user of the missing information and preventing submission.
+- Responsive controls ensure a smooth experience on all device sizes.
 
 ## Feature Ideas
-- Content!
-- Contact page could have more info on it regarding why you would want to contact the author.
-- The about page could be better structured and contane a more fluid explaination.
-- The story telling could be improved with a clear line to follow
-- Gifs could be inserted instead of images ot more clearly create an impact with things that require movmetn to digest, such as particle simulations and dynamic geometry nodes.
--Resources could be more compact and varied to allow more directions for further reading.
+- Sound: Adding sound would add a whole new sense to the game, making it more amusing. but there would also have to be a mute button.
+- different difficulties: Different difficulties, perhaps on the welcome page itself, to give the player an initial challange!
+- Scoring: This is one i wish i had had the time to implement, this would perhaps be the first feature that would need to be implemented to drastically improve game play and give the player an incentive to keep playing.
+- Different levels: As the player progresses, levels could be implemented to gradually increase the difficulty, or simply a liniar increase in difficulty with time, with distance being the end goal.
+- different characters: This would be something that could be implemented ot give the player customization of the game. different characters, such as Kirby could be chosen on the welcome page before the game starts.
+- In the end there are alot of upgrades to this simple game that could be implemented.
 
 # Technologies Used
 ## Languages
@@ -297,17 +246,11 @@ Templates for HTML framework were made using Chat GPT and edited apon with Boots
     * Page markup.
 - [CSS](w3.org/standards/webdesign/htmlcss)
     * Styling.
-
-## Frameworks
-- [Bootstrap4](https://getbootstrap.com/)
-    * Basic styles and outline.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  - Game logic and interactivity.
 
 ## Libraries
-- [Google Fonts](https://fonts.google.com)
-    * Font Styles.
-- [Fontawesome](https://fontawesome.com/)
-    * For icons
-
+- This game was made completely without libraries.
 
 ## Platforms
 - [Github](https://github.com/)
@@ -327,13 +270,26 @@ Templates for HTML framework were made using Chat GPT and edited apon with Boots
 ## Methods
 ### Validation
 - HTML has been validated with [W3C HTML5 Validator](https://validator.w3.org/). No errors
+<div align="center">
+  <img src="../Flappy-Bird/assets/images/w3.org-check-success.png" alt="HTMLvalidation">
+</div>
+
 - CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) No errors
-- Accessabilit validated with [Pagespeed](pagespeed.web.dev) 100% accessabiltiy on all pages
+
+<div align="center">
+  <img src="../Flappy-Bird/assets/images/css-val.png" alt="CSSvalidation">
+</div>
+
+- JavaScript has been validated with [JSHint](https://jshint.com/) No errors
+- Accessabilit validated with [Pagespeed](https://pagespeed.web.dev/) 100% accessabiltiy on all pages
+<div align="center">
+  <img src="../Flappy-Bird/assets/images/access.png" alt="accessability-validation">
+</div>
 
 ### General Testing
 - Each time a feature was added, all the functions were tested to see if there was an impact.
 - All forms have validation and will not submit without the proper information.
-- External links open in a new tab.
+- The game was stress tested by multiple people and any bugs found have been fixed
 
 ### Mobile and Desktop Testing
 - I tested the site personally on my Android device, going through the entire process, checking buttons, functions, checking out, etc. I was personally unable to test on iOS.
@@ -343,14 +299,14 @@ Templates for HTML framework were made using Chat GPT and edited apon with Boots
 
 ## Bugs
 ### Known Bugs
-- On mobile devices perfomance decreases to ~80% compared to the near 100% on desktop devices
-- Content and the visual redline is lacking and could be improved.
-- Storyline could be made more clear.
+- On some mobile devices the playing feild may not be entierly centered, leaving a small gap on one side.
+- Player goal is lacking.
 
 ### Fixed Bugs
-- Burger menu on smaller devices would dissapear and/or not expand. Fixed by removing conflicting CSS styles and adding missing quotation marks in tag classes.
-- Contact form would not send data. Fixed by adding name class to the form tag.
-- Parsing error on google fonts import. Fixed by removing previously unseen comment end tag at the end of import.
+- when two pipes where on the play screen at endgame, the most left pipe would remain in frame and this would escalate with every restart.
+- Bird would fall through floor on restart
+- jumping was allowed even after endgame
+- There are many many many more bugs that where fixed, especially after stress testing by friends.
 
 
 ----
@@ -364,7 +320,7 @@ Templates for HTML framework were made using Chat GPT and edited apon with Boots
 ### Local Instructions
 1. Clone the repository with:
     ```
-    git clone https://github.com/TheBlep/the-history-of-blender
+    git clone https://theblep.github.io/Flappy-Bird/
     ```
     To disconnect it from the master repository, use:
     ```
@@ -385,23 +341,20 @@ Templates for HTML framework were made using Chat GPT and edited apon with Boots
 
 ### Github Instructions
 1. Log in to your GitHub account.
-navigate to [https://github.com/TheBlep/the-history-of-blender](https://github.com/TheBlep/the-history-of-blender).
+navigate to [https://github.com/TheBlep/Flappy-Bird](https://github.com/TheBlep/Flappy-Bird).
 1. You can set up your own repository and copy or clone it, or you fork the repository.
 2. `git add`, `git commit` and `git push` to a GitHub repository, if necessary.
 3. GitHub pages will update from the master branch by default.
 4. Go to the **Settings** page of the repository.
 5. Scroll down to the **Github Pages** section.
 7. Select the Master Branch as the source and **Confirm** the selection.
-8. Wait a minute or two and it should be live for viewing. See my own [here](https://theblep.github.io/the-history-of-blender/index.html).
+8. Wait a minute or two and it should be live for viewing. See my own [here](https://theblep.github.io/Flappy-Bird/).
 
 ## Credits and Contact
 ### Content
-Much of the text content was generated by the AI, GPT-4, including the boilder plate for the html.
-The blender.org [History page](https://www.blender.org/about/history/) was the main source for information as well as my personal knowledge of Blender.
-Any code utilised from a site is documented and credited within the code.
-[Bootstrap](https://getbootstrap.com/) is heavly relied apon for the navbar, footer, contact page, buttons and styling.
-All photographs are screen shots from the Blender website or YouTube. The mockup images where made using a free online tool.
-The README is based heavly on the template from [https://github.com/Ri-Dearg/horizon-photo/blob/main/README.md](https://github.com/Ri-Dearg/horizon-photo/blob/main/README.md)
+Much of the game logic was taken from the following [tutorial](https://www.youtube.com/watch?v=8xPsg6yv7TU).
+The game images where taken from the attached [github page](https://github.com/kubowania/flappy-bird).
+The boiler plate for the welcome page was generated in ChatGPT4.
 
 ### Contact
 Please feel free to contact me via github.
