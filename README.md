@@ -170,6 +170,7 @@ The Business Goals of the "Flappy Bird Game" website are:
 ## Visual Design
 <div align="center">
   <img src="assets/images/welcome-mockup.png" alt="gamepage">
+  <img src="assets/images/fm2.png" alt="gamepage">
 </div>
 
 ### Frameworks
