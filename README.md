@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="../Flappy-Bird/assets/images/title.png" style="background-color: black" alt="Flappy bird!">
+  <img src="assets/images/title.png" style="background-color: black" alt="Flappy bird!">
 </div>
 <div align="center">
   <img src="../Flappy-Bird/assets/images/game-mockup.png" alt="Home Page">
