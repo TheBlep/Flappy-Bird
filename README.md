@@ -204,7 +204,7 @@ A tuttorial to understand the logic behind flappy bird was used as a base for th
 </div>
 
 - The game uses simple 2D graphics created with HTML canvas. These graphics are taken from the [tutorial repository](https://github.com/kubowania/flappy-bird)
-- there was thought to change the game to "flappy Kirby" to show my love for the game character.<img src="assets/images/kirby.png" alt="kirby">
+- There was thought to change the game to "flappy Kirby" to show my love for the game character.<img src="assets/images/kirby.png" alt="kirby">
 
 
 ### Styling
