@@ -37,6 +37,8 @@ let gravity = 2;
 let gap = 450;
 let isGameOver = false;
 let moveObsticalTimers = [];
+let gameTimerId = [];
+let generationId = [];
 
 let bird = document.querySelector('.bird');
 let gameDisplay = document.querySelector('.game-container');
